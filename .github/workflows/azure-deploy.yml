@@ -13,7 +13,6 @@ env:
   INFRA_TEMPLATE_PATH: infra/main.bicep
   AZURE_REGION: ${{ vars.AZURE_REGION || 'eastus' }}
   APP_SERVICE_NAME: ${{ vars.APP_SERVICE_NAME }}
-  APP_SERVICE_PLAN_NAME: ${{ vars.APP_SERVICE_PLAN_NAME }}
 
 permissions:
   id-token: write
@@ -85,7 +84,6 @@ jobs:
           parameters: >
             location=${{ env.AZURE_REGION }}
             appServiceName=${{ env.APP_SERVICE_NAME }}
-            appServicePlanName=${{ env.APP_SERVICE_PLAN_NAME }}
 
   deploy_app:
     name: Deploy Application to Azure App Service

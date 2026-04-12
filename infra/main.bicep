@@ -41,7 +41,7 @@ resource webApp 'Microsoft.Web/sites@2023-12-01' = {
       appSettings: [
         {
           name: 'SCM_DO_BUILD_DURING_DEPLOYMENT'
-          value: 'false'
+          value: 'true'
         }
         {
           name: 'WEBSITES_PORT'
