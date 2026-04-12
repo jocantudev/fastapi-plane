@@ -7,7 +7,8 @@ max_requests_jitter = 50
 
 log_file = "-"
 
-bind = "0.0.0.0:3100"
+bind = f"0.0.0.0:{os.environ.get('PORT', '8000')}"
+workers = 4
 
 worker_class = "uvicorn.workers.UvicornWorker"
 
