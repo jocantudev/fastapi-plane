@@ -47,6 +47,10 @@ resource webApp 'Microsoft.Web/sites@2023-12-01' = {
           name: 'WEBSITES_PORT'
           value: '3100'
         }
+        {
+          name: 'WEB_CONCURRENCY'
+          value: '2'
+        }
       ]
     }
   }
